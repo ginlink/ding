@@ -30,8 +30,14 @@
   - css样式书写最佳实践
 
     - tailwindcss
+
     - quasar-ui
+
     - css变量
+
+      a_b
+
+      嵌套<4
 
   - 覆盖quasar-ui的最佳方式？
 
@@ -79,7 +85,7 @@
 - css样式书写最佳实践
 - 状态管理pinia
 - 统一代码风格
-- 图表（echart）
+- 图表（echart）highchart
 
 ## Quasar
 
