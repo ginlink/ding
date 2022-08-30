@@ -82,6 +82,7 @@
 ### 重点问题
 
 - quasar
+- vue3特例
 - css样式书写最佳实践
 - 状态管理pinia
 - 统一代码风格
@@ -139,3 +140,59 @@ store.use(plugin)
 一个持久化的插件示例
 
 ![image-20220829230732371](https://cdn.gincool.com/img/image-20220829230732371.png)
+
+## Vue3
+
+- vue3的hooks特点
+
+## Css
+
+vue覆盖第三方库的样式
+
+```css
+/* vue3写法 */
+:deep(.tab-wrapper) {
+  .q-tab__label {
+    font-size: 14px;
+    font-weight: 500;
+  }
+}
+```
+
+##### 为什么要这么写？
+
+to create style rules that apply to elements inside of child components
+
+父子组件如果加了scoped则是隔离的
+
+[1] [How do I use /deep/ or >>> or ::v-deep in Vue.js?](https://stackoverflow.com/questions/48032006/how-do-i-use-deep-or-or-v-deep-in-vue-js)
+
+## 图标
+
+### Quasar图标
+
+quasar集成了google fonts，所以可以通过name直接使用
+
+```vue
+<q-icon name="favorite_border" />
+```
+
+### Iconfont图标
+
+> 看文档
+
+[1] https://fonts.google.com/icons?selected=Material+Icons
+
+[2] https://www.iconfont.cn/manage/index?spm=a313x.7781069.1998910419.db775f1f3&manage_type=myprojects&projectId=3416466
+
+## Highcharts
+
+一个在vue3中引入highcharts的示例：https://github.com/ederssouza/vuejs3-highcharts/blob/master/src/components/charts/ScatterChart.vue
+
+散点图示例：https://github.com/ginlink/quasar-project-highcharts/blob/master/src/pages/ScatterChart.vue
+
+squasar散点图在线示例：https://codesandbox.io/p/github/ginlink/quasar-project-highcharts/master
+
+### 自定义样式
+
+https://www.highcharts.com/docs/chart-design-and-style/design-and-style
