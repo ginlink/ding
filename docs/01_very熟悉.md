@@ -93,3 +93,49 @@ Quasar (pronounced `/ˈkweɪ.zɑɹ/`) is an MIT licensed open-source **Vue.js** 
 
 [1] [Quasar](https://quasar.dev/introduction-to-quasar)
 
+## Pinia
+
+[1] [Vue3 + vite + Ts + pinia + 实战 + 源码 +全栈](https://www.bilibili.com/video/BV1dS4y1y7vd?p=58&spm_id_from=pageDriver&vd_source=4065bea3d3139c3fda8b128a6a3a90a7)
+
+```sh
+yarn add pinia
+```
+
+![image-20220829223128251](https://cdn.gincool.com/img/image-20220829223128251.png)
+
+### 修改state
+
+一般有5种修改state方法
+
+![image-20220829224501808](https://cdn.gincool.com/img/image-20220829224501808.png)
+
+### 解构
+
+pinia解构**不**具有响应式，但可以通过 `storeToRefs` 包裹解决，跟 `toRefs` 类似
+
+![image-20220829225013455](https://cdn.gincool.com/img/image-20220829225013455.png)
+
+### Actions和Getters
+
+Pinia的Actions支持同步和异步方法，在Pinia中不存在mutations的概念
+
+Getters与computed类似
+
+### 一些API
+
+| API        | 描述          |
+| ---------- | ------------- |
+| $reset     | 重置store的值 |
+| $subscribe | 订阅变化      |
+| $onAction  | 监听Action    |
+
+### 插件
+
+```ts
+// 注册插件
+store.use(plugin)
+```
+
+一个持久化的插件示例
+
+![image-20220829230732371](https://cdn.gincool.com/img/image-20220829230732371.png)
